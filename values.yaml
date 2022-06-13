@@ -141,19 +141,16 @@ dockerRegistries:
 - name: dockerhub
   address: index.docker.io
   repositories:
-    - library/alpine
-    - library/ubuntu
-    - library/centos
-    - library/nginx
-# - name: gcr
-#   address: https://gcr.io
-#   username: _json_key
-#   password: '<INSERT YOUR SERVICE ACCOUNT JSON HERE>'
-#   email: 1234@5678.com
+   library/spinnaker
+# - name: aws
+#   address:https://us-east-1.console.aws.amazon.com/console/home?nc2=h_ct&region=us-east-1&src=header-signin#
+#   username: dineshkumar021993
+#   password: dinesh@#4
+#   email: dineshkumar.pentakota@gmail.com
 # - name: ecr
-#   address: <AWS-ACCOUNT-ID>.dkr.ecr.<REGION>.amazonaws.com
-#   username: AWS
-#   passwordCommand: aws --region <REGION> ecr get-authorization-token --output text --query 'authorizationData[].authorizationToken' | base64 -d | sed 's/^AWS://'
+#   address: 4513-2148-7938.dkr.ecr.east-us-1.amazonaws.com
+#   username: dineshkumar021993
+#   passwordCommand: eyJwYXlsb2FkIjoiVGpVY05zMG5jb21lUEJITzRMQWovak13eklGNW4wRDB0SWlVWFJqTmlLbnh3UkVnaEk2Zk5Ubi9Rc0VKKzNSZS9Jb1RYVitUY1JhdGgzdzc1UDFDemwxek9EcEdFL3BITzVWVHJNdEhVWDZKMnJCazJpQnh6M2E5R08vUm9YUjdIWVZQaGFvd1ZvdVIzdnZlZjU3WklXWHJVQ1RGWlpTVVBWZFB4SUt2NVNPdGMwTkRtUXpORzdndzFJZGlJTFhCbEgyejk5Z0FSOERoK2lBbW52ZS9ZUzZrQmlHeXNlTmVQSmFnTHZkZHRwN1YvRzRKMTJIYXk0LzRDekt0OVd4WDEwWEg4VlkrUHBsYU85UzJkVEd5djU3QmhQVEErc25QYTYzV3Z3eEE5UG03VUJmTFh5TExwU09LbEs0Z2ovbVJJTGFsZXorYXhYOFZuRlJPdnpNRkc0T1hlZzlIeEJQM0QzS0FqVGowMkF1bmU2a0Njbmx2Ky8ralpxTFE2d0dsNE5WTW51bTBLdkJ0cG5TS0g2MzY0MzZiZzNzMGxOU1VhRUYxNlh5VnNvM1dhc3dRUjZGQTQrR1E5dG8wM3cxV1RqYm0vT1NBREIwZTljYmdCcDJpY01NL0Q2Z1l5Nm16N2RwTk5iUzhaTVBKTExsY1g3V1N3Umc4bm9DQUIxaWR2eDEwWVVhd2M3UEZ2ekFTN0htamNmb293SCs3eXhtRHozUTVvYzZSbDBaTFBDbjZ1c2NiWGdRK01SbWhOYzByMzIvVmNFRnRJVWwrU3NLS2xDQVdnaXBGTVZlalMrcmNPSmtrNzBmbCtvQW13U0dQWTVJckNUOURPSmRLWHBUcE54aDE4eFF2M1E2UnJjSUpnNW1WMGNGeE1LQ0E1YytLRFRLTjZnelo1bkVtdVhZSVJRcTJzMitodmh5L3NKYm5NTzRNcnN4VXRvc1VVWEY3b3NDTVY0UHNQTE9keHJyeUlJbzFQT3Z5cUNNNW16U1VEZHQrYVpTQ3d1ZEVsV0t5SDJheHVXZ2tDRHFOMHE2ZUZaSWFtOWIySmdsTitSZHkwdkhEaDVyMHRtMVY2QkxqL1hKbTZQQ1VNVUtZNGltWWY1bDJxNGYyZ2NnM0dQVEg4QVlwTFNiTUY4Y2JOaVVWdGRleWVPN3gvYkhvZTRFcCswQmhsUTRUWFhsVm4zVGJsUGZVOEhBY05jTXE5WlNBaFUyR2pjTXZxZW11N1JUNXdmNkQ0OGF4NjNod3B1MlAxVFd2QjlmVkZkK3pHbHloK0FTeTBEZEtXOHlLTXE2TG9hTnByejNkQThjR0xiRnA5L1FOOG5oakVFU2wiLCJkYXRha2V5IjoiQVFFQkFIaHdtMFlhSVNKZVJ0Sm01bjFHNnVxZWVrWHVvWFhQZTVVRmNlOVJxOC8xNHdBQUFINHdmQVlKS29aSWh2Y05BUWNHb0c4d2JRSUJBREJvQmdrcWhraUc5dzBCQndFd0hnWUpZSVpJQVdVREJBRXVNQkVFREF4RTdLRVNpaHlSY3BpMXZnSUJFSUE3WW8wNlVZVU14T0oxMkZCb3p6dlgvVGZaL1J3Z0RZUkp3elZxMythYmsrdzhmaWMxTFpmU1ZZRXJ6TzdmV0dMa1ZTVTBnMHZiZWJwMVNwYz0iLCJ2ZXJzaW9uIjoiMiIsInR5cGUiOiJEQVRBX0tFWSIsImV4cGlyYXRpb24iOjE2NTUxNDg3MDV9
 
 # If you don't want to put your passwords into a values file
 # you can use a pre-created secret instead of putting passwords
@@ -164,20 +161,18 @@ dockerRegistries:
 # dockerRegistryAccountSecret: myregistry-secrets
 
 kubeConfig:
-  # Use this when you want to register arbitrary clusters with Spinnaker
-  # Upload your ~/kube/.config to a secret
-  enabled: false
-  # secretName: my-kubeconfig
-  # secretKey: config
-  # Use this when you want to configure halyard to reference a kubeconfig from s3
-  # This allows you to keep your kubeconfig in an encrypted s3 bucket
-  # For more info visit:
-  #   https://www.spinnaker.io/reference/halyard/secrets/s3-secrets/#secrets-in-s3
-  # encryptedKubeconfig: encrypted:s3!r:us-west-2!b:mybucket!f:mykubeconfig
-  # List of contexts from the kubeconfig to make available to Spinnaker
+  kubeConfig:
+  enabled: true
+  secretName: my-kubeconfig
+  secretKey: config
   contexts:
-  - default
-  deploymentContext: default
+  # Names of contexts available in the uploaded kubeconfig
+  - my-context
+  # This is the context from the list above that you would like
+  # to deploy Spinnaker itself to.
+  deploymentContext: minikube
+  contexts:
+  - spinnaker
   # Use this to limit the namespaces this kubernetes account will access.
   # Note, if you use nameSpaces, omittedNameSpaces will not be used.
   # Note, the casing of the nameSpace variable here.
