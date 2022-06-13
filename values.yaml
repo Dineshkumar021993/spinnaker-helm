@@ -129,7 +129,7 @@ halyard:
   customCerts:
     ## Enable to override the default cacerts with your own one
     enabled: false
-    secretName: custom-cacerts
+    secretName: certs
 
 # Define which registries and repositories you want available in your
 # Spinnaker pipeline definitions
@@ -141,12 +141,12 @@ dockerRegistries:
 - name: dockerhub
   address: index.docker.io
   repositories:
-   library/spinnaker
+   library/awscontainerregistry123
 # - name: aws
 #   address:https://us-east-1.console.aws.amazon.com/console/home?nc2=h_ct&region=us-east-1&src=header-signin#
 #   username: dineshkumar021993
 #   password: dinesh@#4
-#   email: dineshkumar.pentakota@gmail.com
+#   email: dineshkumar.pentakota1@gmail.com
 # - name: ecr
 #   address: 4513-2148-7938.dkr.ecr.east-us-1.amazonaws.com
 #   username: dineshkumar021993
@@ -170,14 +170,14 @@ kubeConfig:
   - my-context
   # This is the context from the list above that you would like
   # to deploy Spinnaker itself to.
-  deploymentContext: minikube
-  contexts:
-  - spinnaker
+  deploymentContext:  do-blr1-k8s-1-22-8-do-1-blr1-1655109515261
+  contexts: do-blr1-k8s-1-22-8-do-1-blr1-1655109515261
+  - 
   # Use this to limit the namespaces this kubernetes account will access.
   # Note, if you use nameSpaces, omittedNameSpaces will not be used.
   # Note, the casing of the nameSpace variable here.
   # nameSpaces:
-  # - namespace1
+    - spinnaker
   # - namespace2
   omittedNameSpaces:
   - kube-system
@@ -207,7 +207,7 @@ kubeConfig:
 
 # Change this if youd like to expose Spinnaker outside the cluster
 ingress:
-  enabled: false
+  enabled: true
   # className: 
   # host: spinnaker.example.org
   # annotations:
